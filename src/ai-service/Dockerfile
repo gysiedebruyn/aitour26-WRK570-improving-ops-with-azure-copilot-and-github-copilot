@@ -16,7 +16,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 COPY requirements.txt .
 
 # Install the dependencies
-RUN pip install --no-cache-dir --disable-pip-version-check -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Create and use a non-root user
 RUN addgroup -S app && adduser -S -G app app
